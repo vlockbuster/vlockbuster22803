@@ -1,26 +1,26 @@
-import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 const NavBar = () => {
 
     return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div className="container-fluid">
-        <a className="navbar-brand" href="javascript:void(0)">
+        <NavLink to={'/'} className="navbar-brand" >
             <img src="popcorn.png" width={40}></img>
-        </a>
+        </NavLink>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="mynavbar">
         <ul className="navbar-nav me-auto">
             <li className="nav-item">
-            <a className="nav-link" href="javascript:void(0)">Peliculas</a>
+            <NavLink to={'/Peliculas'} className="nav-link" >Peliculas</NavLink>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="javascript:void(0)">Series</a>
+            <NavLink to={'/Series'} className="nav-link" >Series</NavLink>
             </li>
             <li className="nav-item">
-            <a className="nav-link" href="javascript:void(0)">Categorias</a>
+            <NavLink to={'/Categorias'} className="nav-link">Categorias</NavLink>
             </li>
         </ul>
         <form className="d-flex">
